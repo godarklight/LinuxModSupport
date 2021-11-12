@@ -124,12 +124,6 @@ namespace LinuxModSupport
                     //Stick to using /
                     string modfileReplace = modFile.Replace('\\', '/');
 
-                    //Skip modexport
-                    if (modfileReplace.EndsWith("modexport.cfg", StringComparison.InvariantCultureIgnoreCase))
-                    {
-                        continue;
-                    }
-
                     //Get paths and create folder for the mods
                     string relativeName = $"{modFolderName}/{modfileReplace.Substring(steamModDir.Length + 1)}";
                     string destination = $"{addonsDir}/{relativeName}";
@@ -179,11 +173,10 @@ namespace LinuxModSupport
                 if (!steamFilesRelative.Contains(managedFile))
                 {
                     string deleteFile = $"{addonsDir}/{managedFile}";
-                    if (deleteFile.EndsWith(".modcfg", StringComparison.InvariantCultureIgnoreCase))
+                    if (deleteFile.EndsWith("modexport.cfg", StringComparison.InvariantCultureIgnoreCase))
                     {
                         ConfigNode cn = ConfigNode.Load(deleteFile);
-                        ConfigNode cn2 = cn.GetNode("ModCFG");
-                        string modTitle = cn2.GetValue("title");
+                        string modTitle = cn.GetValue("Title");
                         if (!string.IsNullOrEmpty(modTitle))
                         {
                             newMods.Add(modTitle);
