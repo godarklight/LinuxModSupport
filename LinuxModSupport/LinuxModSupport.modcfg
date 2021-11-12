@@ -1,0 +1,15 @@
+ModCFG
+{
+    title = LinuxModSupport
+    author = godarklight
+    modVersion = 0.1.0
+    requiresGameVersion = 0.101.2
+    imgPath = Addons\LinuxModSupport\preview.png
+    Plugin
+    {
+        name = LinuxModSupport
+        description = Automatically copy files into the Addons folder.
+        asmpath = Addons\LinuxModSupport\LinuxModSupport.dll
+        order = 1
+    }
+} 

@@ -1,0 +1,8 @@
+.vs
+.vscode
+obj
+bin
+External/Managed
+*.mp3
+*.mp4
+*.user
