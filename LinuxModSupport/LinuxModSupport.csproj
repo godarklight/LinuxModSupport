@@ -36,6 +36,6 @@
   <ItemGroup>
     <None Update="modexport.cfg" CopyToOutputDirectory="PreserveNewest" />
     <None Update="LinuxModSupport.modcfg" CopyToOutputDirectory="PreserveNewest" />
-    <None Update="preview.jpg" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="preview.png" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 </Project>
