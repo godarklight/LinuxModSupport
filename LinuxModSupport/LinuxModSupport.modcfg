@@ -4,7 +4,7 @@ ModCFG
     author = godarklight
     modVersion = 0.1.0
     requiresGameVersion = 0.101.2
-    imgPath = Addons\LinuxModSupport\preview.png
+    imgPath = preview.png
     Plugin
     {
         name = LinuxModSupport
